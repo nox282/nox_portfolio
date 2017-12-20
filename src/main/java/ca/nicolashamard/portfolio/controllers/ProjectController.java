@@ -24,8 +24,8 @@ public class ProjectController {
     private final Logger log = LoggerFactory.getLogger(ProjectController.class);
 
 
-	@RequestMapping(value = {"/projects", "/projects/"}, method = RequestMethod.GET)
-	public ResponseEntity getProjects(){
+	@RequestMapping(value = {"/{lang}/projects", "/{lang}/projects/"}, method = RequestMethod.GET)
+	public ResponseEntity getProjects(@PathVariable String lang){
 		try {
 			return ResponseEntity.ok(serializeProjects(projectRepository.findAll()));
 		} catch(Exception e) {
@@ -34,8 +34,8 @@ public class ProjectController {
 		}
 	}
 
-	@RequestMapping(value = {"/project/{title}"}, method = RequestMethod.GET)
-	public ResponseEntity getProject(@PathVariable String title){
+	@RequestMapping(value = {"/{lang}/project/{title}"}, method = RequestMethod.GET)
+	public ResponseEntity getProject(@PathVariable("lang") String lang, @PathVariable("title") String title){
 		try {
 			return ResponseEntity.ok(serializeProjects(Arrays.asList(projectRepository.findByTitle(title))));
 		 } catch(Exception e) {

@@ -19,9 +19,11 @@ public class Project {
 
 	private String videoURL;
 
+	private String[] tags;
+
 	public Project(){}
 
-	public Project(String id, String title, String description, String url, String imageURL, String[] screenshots, String videoURL){
+	public Project(String id, String title, String description, String url, String imageURL, String[] screenshots, String videoURL, String[] tags){
 		this.id = id;
 		this.title = title;
 		this.description = description;
@@ -29,6 +31,7 @@ public class Project {
 		this.imageURL = imageURL;
 		this.screenshots = screenshots;
 		this.videoURL = videoURL;
+		this.tags = tags;
 	}
 
 	public String getId(){ return this.id; }
@@ -38,4 +41,5 @@ public class Project {
 	public String getImageURL() { return this.imageURL; }
 	public String[] getScreenshots() { return this.screenshots; }
 	public String getVideoURL() { return this.videoURL; }
+	public String[] getTags() { return this.tags; }
 }

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.*;
 import org.slf4j.*;
 
 @Controller
-public class ProjectController{
+public class ProjectController {
 
 	@Autowired
 	private ProjectRepository projectRepository;

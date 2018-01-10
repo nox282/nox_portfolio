@@ -43,7 +43,7 @@ db.resume.insert([
 		location: 'Montréal, Québec, Canada',
 		languages: [
 			'French (Native)',
-			'English (Full professional proficiency)'
+			'English (Professional proficiency)'
 		],
 		description: 'I am a young graduate in software engineering looking for new opportunities in the game development world.',
 		education: [

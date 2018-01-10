@@ -118,6 +118,11 @@ const renderResumeElements = (data) => {
                         <h3>Technical Experience</h3>
                         <hr class="star-primary"/>
                         <ul class="list-inline">${data.technologies.map((techno) => `<li>${techno}</li>`).join(', ')}</ul>
+                        <br/>
+                        
+                        <h3>Languages</h3>
+                        <hr class="star-primary"/>
+                        <ul class="list-inline">${data.languages.map((lang) => `<li>${lang}</li>`).join()}</ul>
                     </div>
                 </div>
             </div>

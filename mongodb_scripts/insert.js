@@ -39,7 +39,7 @@ db.resume.insert([
 	{
 		firstname: 'Nicolas',
 		lastname: 'Hamard',
-		pictureURL: '',
+		pictureURL: 'https://memegenerator.net/img/images/600x600/11424146/begging-kitty.jpg',
 		location: 'Montréal, Québec, Canada',
 		languages: [
 			'French (Native)',

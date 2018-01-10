@@ -15,6 +15,19 @@
     });
 });*/
 
+//navbar sticks top when scrolled past
+$(function() {
+    $(window).on('scroll', () => {
+        let threshold = $("header").outerHeight(true);
+        if($(window).scrollTop() > threshold && !$('.navbar').hasClass('navbar-fixed-top')) {
+            $('.navbar').addClass('navbar-fixed-top');  
+        } else if($(window).scrollTop() < threshold && $('.navbar').hasClass('navbar-fixed-top')) {
+            $('.navbar').removeClass('navbar-fixed-top');  
+        }
+    });
+});
+
+
 // Floating label headings for the contact form
 $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {

@@ -5,11 +5,26 @@ let appHistory = [];
 
 // HTML ELEMENTS ##########################################
 
+const renderHeaderElement = (resume) => {
+    return `<div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="${resume.pictureURL}" alt="">
+                    <div class="intro-text">
+                        <span class="name">${resume.firstname} ${resume.lastname}</span>
+                        <hr class="star-light">
+                        <span class="skills">Video Game Developer</span><br/>
+                        <span class="skills">${resume.location}</span>
+                    </div>
+                </div>
+            </div>`
+}
+
 const renderItem = (index, item) => {
     return `<div class="col-sm-4 portfolio-item">
                 <a href="#${"portfolioModal"+index}" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
+                            <span>${item.title}</span>
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
@@ -119,7 +134,7 @@ const renderResumeElements = (data) => {
                         <hr class="star-primary"/>
                         <ul class="list-inline">${data.technologies.map((techno) => `<li>${techno}</li>`).join(', ')}</ul>
                         <br/>
-                        
+
                         <h3>Languages</h3>
                         <hr class="star-primary"/>
                         <ul class="list-inline">${data.languages.map((lang) => `<li>${lang}</li>`).join()}</ul>
@@ -175,6 +190,27 @@ const render = (content, query) => {
         element.innerHTML = content;
 }
 
+const renderOOS = () => {
+    let content = `<div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="resume-body">
+                                <h1>Oops! It looks like something went wrong...</h1>
+                                <p style="text-align: center;">Hopefully the service is back up shortly!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+    render(content, '#main-content');
+}
+
+const renderHeaderSection = (resumes) => {
+    let content = `${resumes.map((resume) => renderHeaderElement(resume)).join('')}`;
+    if(content != '')
+        render(content, '#header-container');
+    
+    return resumes;
+}
 
 const renderAllModals = (itemList) => {
     let content = `${itemList.map((item, i) => renderModal(i+1, item)).join('')}`;
@@ -213,15 +249,8 @@ const renderHiringInfoPage = (resumes) => {
 
 //error handling on data fetch
 const handleErrors = (response) => {
-    if(!response.ok && Response.status != 500) {
-        response.text().then(text => {
-            injectError(text);
-            return text;
-        });
-        throw Error(`${response.status} : ${response.statusText}`);
-    }
-    else if(response.status == 500){
-        injectError(response.statusText);
+    if(!response.ok) {
+        renderOOS();
         throw Error(`${response.status} : ${response.statusText}`);
     }
     return response;
@@ -253,6 +282,7 @@ const renderHiringInfo = () => {
 }
 
 const dispatchAEvent = (href) => {
+    console.log(href);
     if(href == `${document.URL}#portfolio`)
         renderProjects();
     else if(href == `${document.URL}#resume`)
@@ -269,15 +299,22 @@ document.body.addEventListener('click', (event) => {
     let tag = event.target;
     if (tag.tagName == 'A' && tag.href && event.button == 0) {
         if (tag.origin == document.location.origin) {
-            //let oldPath = document.location.pathname;
-            //let newPath = tag.pathname;
-            //
+            let oldPath = document.location.pathname;
+            let newPath = tag.pathname;
+            
+            console.log(newPath);
+
             event.preventDefault();
             dispatchAEvent(tag.href);
         }
     }
 });
 
-dispatchAEvent(`${document.URL}#portfolio`);
+fetch(`/${langSwitch}/resume`)
+    .then((resp) => handleErrors(resp))
+    .then((resp) => resp.json())
+    .then((resp) => renderHeaderSection(resp))
+    .catch((resp) => resp);
 
+dispatchAEvent(`${document.URL}#portfolio`);
 });

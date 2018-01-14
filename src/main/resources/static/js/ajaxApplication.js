@@ -58,7 +58,9 @@ const renderModal = (index, item) => {
                             
                             ${(item.team.length > 0) ? 
                             `<ul class="list-inline item-details"><strong>By : </strong>
-                                ${item.team.map((person) => `<li>${person}</li>`).join()}
+                                ${item.team.map((person) => `<li><strong>${(person.url != '') ?
+                                `<a href="${person.url}" class="portfolio-link">${person.name}</a>` : `${person.name}`}
+                                </strong></li>`).join()}
                             </ul>`: ''}
                             
                             ${(item.technologies.length > 0) ? 
@@ -66,8 +68,9 @@ const renderModal = (index, item) => {
                                 ${item.technologies.map((techno) => `<li>${techno}</li>`).join()}
                             </ul>`: ''}
                             
-                            <p><strong>Sources : <a href="${item.url}" class="portfolio-link">${item.url}</a></strong><br/>
-                            <strong>Video : <a href="${item.videoURL}" class="portfolio-link">${item.videoURL}</a></strong></p>
+                            <p>${(item.url != '') ? `<strong>URL : <a href="${item.url}" class="portfolio-link">${item.url}</a></strong><br/>`:``}
+                            <strong>Sources : <a href="${item.sourceURL}" class="portfolio-link">${item.sourceURL}</a></strong><br/>
+                            ${(item.videoURL != '') ? `<strong>Video : <a href="${item.videoURL}" class="portfolio-link">${item.videoURL}</a></strong>`:``}</p>
                             
                             ${(item.controls.length != 0) ? 
                             `<h3>Controls</h3>

@@ -17,13 +17,15 @@ public class Project {
 
 	private String url;
 
+	private String sourceURL;
+
 	private String imageURL;
 
 	private String[] screenshots;
 
 	private String videoURL;
 
-	private String[] team;
+	private Collaborator[] team;
 
 	private String gameEngine;
 
@@ -33,13 +35,14 @@ public class Project {
 
 	public Project(){}
 
-	public Project(String id, String title, String description, String[] controls, String note, String url, String imageURL, String[] screenshots, String videoURL, String[] team, String gameEngine, String[] technologies, String[] tags){
+	public Project(String id, String title, String description, String[] controls, String note, String url, String sourceURL, String imageURL, String[] screenshots, String videoURL, Collaborator[] team, String gameEngine, String[] technologies, String[] tags){
 		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.controls = controls;
 		this.note = note;
 		this.url = url;
+		this.sourceURL = sourceURL;
 		this.imageURL = imageURL;
 		this.screenshots = screenshots;
 		this.videoURL = videoURL ;
@@ -55,10 +58,11 @@ public class Project {
 	public String[] getControls() { return this.controls; }
 	public String getNote() { return this.note; }
 	public String getUrl() { return this.url; }
+	public String getSourceURL() { return this.sourceURL; }
 	public String getImageURL() { return this.imageURL; }
 	public String[] getScreenshots() { return this.screenshots; }
 	public String getVideoURL() { return this.videoURL; }
-	public String[] getTeam() { return this.team; }
+	public Collaborator[] getTeam() { return this.team; }
 	public String getGameEngine() { return this.gameEngine; }
 	public String[] getTechnologies() { return this.technologies; }
 	public String[] getTags() { return this.tags; }

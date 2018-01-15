@@ -322,7 +322,7 @@ const renderHeader = () => {
         .then((resp) => handleErrors(resp))
         .then((resp) => resp.json())
         .then((resp) => renderHeaderSection(resp))
-        .catch((resp) => renderOOS());
+        .catch((resp) => renderOOS(langSwitch));
 }
 
 const renderProjects = () => {
@@ -331,7 +331,7 @@ const renderProjects = () => {
         .then((resp) => resp.json())
         .then((resp) => renderItemList(resp))
         .then((resp) => renderAllModals(resp))
-        .catch((resp) => renderOOS());
+        .catch((resp) => renderOOS(langSwitch));
 }
 
 const renderResume = () => {
@@ -339,7 +339,7 @@ const renderResume = () => {
         .then((resp) => handleErrors(resp))
         .then((resp) => resp.json())
         .then((resp) => renderResumePage(resp))
-        .catch((resp) => renderOOS());
+        .catch((resp) => renderOOS(langSwitch));
 }
 
 const renderHiringInfo = () => {
@@ -347,7 +347,7 @@ const renderHiringInfo = () => {
         .then((resp) => handleErrors(resp))
         .then((resp) => resp.json())
         .then((resp) => renderHiringInfoPage(resp))
-        .catch((resp) => renderOOS());
+        .catch((resp) => renderOOS(langSwitch));
 }
 
 const renderPage = (hash) => {

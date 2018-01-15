@@ -6,17 +6,18 @@ db.project.insert([
 		description: 'Game developed in a span of 3 days during the UQAMJAM 2017 under the theme  “Avocado RPG”. It is a (local on one computer) multiplayer turn based game in which your goal is to destroy your opponent’s avocado tree. A tree produces one seed every three turns. During your turn, you can select a tree and throw a seed from it. If the seed lands on the ground, an avocado tree will grow where the seed landed. If the seed touches a wall or a rock, it will be destroyed. If the seed lands on a tree, the tree will lose 1 life point no matter its faction. Every tree spawns with 2 life points. The game ends when one of the player’s starter tree gets destroyed.',
 		controls: [
 			'Left click to select a tree (there is no selection animation)',
-			'With a tree selected, left click to throw a seed (the mouse position gives the direction, the distance between the cursor and the tree gives the force)',
+			'With a tree selected, right click to load a seed (once a seed is loaded, you can\'t go back on your move)',
+			'With a seed loaded, left click to throw a seed (the mouse position gives the direction, the distance between the cursor and the tree gives the force)',
 			'Space to pass your turn (or use the UI button)'
 		],
 		note: 'The in game tutorial was written after 2 sleepless nights and isn’t of any help… sorry!',
 		url: '',
 		sourceURL: 'https://bitbucket.org/nox282/uqamjam_2017_avocadowars',
-		imageURL: 'https://i.imgur.com/aqbu44W.jpg',
+		imageURL: 'img/portfolio/AvocadoWars/1.jpg',
 		screenshots: [
-			'https://i.imgur.com/kTN6gPM.png', 
-			'https://i.imgur.com/1p4lgMJ.png', 
-			'https://i.imgur.com/LqsOiZL.jpg'
+			'img/portfolio/AvocadoWars/2.png',
+			'img/portfolio/AvocadoWars/3.png',
+			'img/portfolio/AvocadoWars/4.jpg'
 		],
 		videoURL: '',
 		team: [
@@ -42,20 +43,21 @@ db.project.insert([
 		note: 'The game implements HTTP sockets client side as well as server side. Unfortunately, Unity builds to WebGL application does not support websockets. The multiplayer has been deactivated. To access the game, be sure to use HTTP, not HTTPS',
 		url: 'http://veritas-jeu.herokuapp.com/',
 		sourceURL: 'https://github.com/nox282/inm5151-veritas',
-		imageURL: 'https://i.imgur.com/u3BWPBU.jpg',
+		imageURL: 'img/portfolio/Veritas/1.jpg',
 		screenshots: [
-			'https://i.imgur.com/S43Uu0F.png',
-			'https://i.imgur.com/2pjm91M.png',
-			'https://i.imgur.com/jJBkCP3.jpg',
-			'https://i.imgur.com/PL63Kzj.jpg',
-			'https://i.imgur.com/lLUGatR.png',
-			'https://i.imgur.com/iyPRnTH.png',
-			'https://i.imgur.com/urEbmpa.jpg',
-			'https://i.imgur.com/s1Lopn7.png',
-			'https://i.imgur.com/XDFVbKX.png',
-			'https://i.imgur.com/eGtxqNm.jpg',
-			'https://i.imgur.com/XvFvPHx.png',
-			'https://i.imgur.com/mV9jxai.jpg'
+			'img/portfolio/Veritas/2.png',
+			'img/portfolio/Veritas/3.png',
+			'img/portfolio/Veritas/4.jpg',
+			'img/portfolio/Veritas/5.jpg',
+			'img/portfolio/Veritas/6.png',
+			'img/portfolio/Veritas/7.png',
+			'img/portfolio/Veritas/8.jpg',
+			'img/portfolio/Veritas/9.png',
+			'img/portfolio/Veritas/10.png',
+			'img/portfolio/Veritas/11.jpg',
+			'img/portfolio/Veritas/12.png',
+			'img/portfolio/Veritas/13.jpg',
+
 		],
 		videoURL: '',
 		team: [
@@ -91,14 +93,14 @@ db.project.insert([
 		note: '',
 		url: 'https://github.com/nox282/INF5071_tp1/releases',
 		sourceURL: 'https://bitbucket.org/mordinox/inf5071_project/overview',
-		imageURL: 'https://i.imgur.com/2gbgxWu.jpg',
+		imageURL: 'img/portfolio/Marco/1.jpg',
 		screenshots: [
-			'https://i.imgur.com/JcIzMDj.jpg',
-			'https://i.imgur.com/vBK1S9f.jpg',
-			'https://i.imgur.com/xcEJiKb.png',
-			'https://i.imgur.com/BTSnK98.png',
-			'https://i.imgur.com/kQf2aBm.png',
-			'https://i.imgur.com/lQ4W9Sq.png'
+			'img/portfolio/Marco/2.jpg',
+			'img/portfolio/Marco/3.jpg',
+			'img/portfolio/Marco/4.png',
+			'img/portfolio/Marco/5.png',
+			'img/portfolio/Marco/6.png',
+			'img/portfolio/Marco/7.png'
 		],
 		videoURL: '',
 		team: [
@@ -123,7 +125,7 @@ db.project.insert([
 		note: '',
 		url: 'https://www.nicolashamard.ca',
 		sourceURL: 'https://github.com/nox282/nox_portfolio',
-		imageURL: 'https://i.imgur.com/KkvihOd.png',
+		imageURL: 'img/portfolio/portfolio/1.png',
 		screenshots: [],
 		videoURL: '',
 		team: [
@@ -150,11 +152,11 @@ db.project.insert([
 		note: 'You can play around with just one car (arrow key to control) by checking out the tag v0.1 from the linked repository',
 		url: '',
 		sourceURL: 'https://bitbucket.org/gdnox/inf4230_tp3/overview',
-		imageURL: 'https://i.imgur.com/MMVRWrp.png',
+		imageURL: 'img/portfolio/AIProject/1.png',
 		screenshots: [
-			'https://i.imgur.com/k96qBu2.png',
-			'https://i.imgur.com/2ymaan1.png',
-			'https://i.imgur.com/Eo2hQ5z.png' 
+			'img/portfolio/AIProject/2.png',
+			'img/portfolio/AIProject/3.png',
+			'img/portfolio/AIProject/4.png'
 		],
 		videoURL: '',
 		team: [
@@ -177,7 +179,7 @@ db.project.insert([
 		note: 'Project is not deployed online.',
 		url: '',
 		sourceURL: 'https://bitbucket.org/jsnxteam/inf4375-project',
-		imageURL: 'https://i.imgur.com/oNYn2aD.png',
+		imageURL: 'img/portfolio/MtlWebService/1.png',
 		screenshots: [],
 		videoURL: '',
 		team: [
@@ -201,7 +203,7 @@ db.resume.insert([
 	{
 		firstname: 'Nicolas',
 		lastname: 'Hamard',
-		pictureURL: 'https://memegenerator.net/img/images/600x600/11424146/begging-kitty.jpg',
+		pictureURL: 'img/profile.png',
 		location: 'Montréal, Québec, Canada',
 		languages: [
 			'French (Native)',
@@ -212,14 +214,14 @@ db.resume.insert([
 			{
 				school: 'UQAM | Université du Québec à Montréal',
 				url: 'https://uqam.ca/',
-				diploma: 'Baccalauréat en Informatique et Génie Logiciel',
+				diploma: 'Baccalauréat en Informatique et Génie Logiciel (Software Engineering Bachelor)',
 				fromYear: '2015',
 				toYear: '2017'
 			},
 			{
 				school: 'SUPINFO International University',
 				url: 'https://www.supinfo.com/',
-				diploma: 'License en Informatique',
+				diploma: '',
 				fromYear: '2010',
 				toYear: '2012'	
 			}

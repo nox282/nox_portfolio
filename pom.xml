@@ -27,6 +27,12 @@
             <artifactId>nekohtml</artifactId>
             <version>1.9.21</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+
         <!--<dependency>  DOESN'T SUPPORT JRE9 YET.
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

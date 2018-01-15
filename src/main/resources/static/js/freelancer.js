@@ -19,10 +19,13 @@
 $(function() {
     $(window).on('scroll', () => {
         let threshold = $("header").outerHeight(true);
+        let navbarSpacerValue = $('.navbar').outerHeight(true);
         if($(window).scrollTop() > threshold && !$('.navbar').hasClass('navbar-fixed-top')) {
-            $('.navbar').addClass('navbar-fixed-top');  
+            $('.navbar').addClass('navbar-fixed-top');
+            $('#before-navbar').css('padding-bottom', `${navbarSpacerValue}px`);
         } else if($(window).scrollTop() < threshold && $('.navbar').hasClass('navbar-fixed-top')) {
-            $('.navbar').removeClass('navbar-fixed-top');  
+            $('.navbar').removeClass('navbar-fixed-top');
+            $('#before-navbar').css('padding-bottom', '0px');
         }
     });
 });

@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 let langSwitch = 'en';
-let appHistory = [];
+let activeNavA;
 
 // HTML ELEMENTS ##########################################
 
 const renderHeaderElement = (resume) => {
     return `<div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="${resume.pictureURL}" alt="">
+                    <div>
+                        <img class="img-fluid mb-5 d-block mx-auto" src="${resume.pictureURL}" alt="">
+                    </div>
                     <div class="intro-text">
                         <span class="name">${resume.firstname} ${resume.lastname}</span>
                         <hr class="star-light">
@@ -128,6 +130,7 @@ const renderResumeElements = (data) => {
                                     <p>
                                     <a href="${item.url}" class="portfolio-link">${item.school}</a>.<br/>
                                     from ${item.fromYear} to ${item.toYear}.
+                                    ${(item.diploma != '') ? `<br/>${item.diploma}` : ``}
                                     </p>
                                 </div>
                             </li>`).join('')}
@@ -141,6 +144,11 @@ const renderResumeElements = (data) => {
                         <h3>Languages</h3>
                         <hr class="star-primary"/>
                         <ul class="list-inline">${data.languages.map((lang) => `<li>${lang}</li>`).join()}</ul>
+                        
+                        <div class="container">
+                            <hr class="star-primary"/>
+                            <p style="text-align: center;">Download this résumé as pdf : <a href="/${langSwitch}/resume/HamardNicolas-CV.pdf" download>FR</a> or <a href="/${langSwitch}/resume/HamardNicolas-CV.pdf" download>EN</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -252,10 +260,8 @@ const renderHiringInfoPage = (resumes) => {
 
 //error handling on data fetch
 const handleErrors = (response) => {
-    if(!response.ok) {
-        renderOOS();
+    if(!response.ok)
         throw Error(`${response.status} : ${response.statusText}`);
-    }
     return response;
 }
 
@@ -265,7 +271,7 @@ const renderProjects = () => {
         .then((resp) => resp.json())
         .then((resp) => renderItemList(resp))
         .then((resp) => renderAllModals(resp))
-        .catch((resp) => resp);
+        .catch((resp) => renderOOS());
 }
 
 const renderResume = () => {
@@ -273,7 +279,7 @@ const renderResume = () => {
         .then((resp) => handleErrors(resp))
         .then((resp) => resp.json())
         .then((resp) => renderResumePage(resp))
-        .catch((resp) => resp);
+        .catch((resp) => renderOOS());
 }
 
 const renderHiringInfo = () => {
@@ -281,43 +287,30 @@ const renderHiringInfo = () => {
         .then((resp) => handleErrors(resp))
         .then((resp) => resp.json())
         .then((resp) => renderHiringInfoPage(resp))
-        .catch((resp) => resp);
+        .catch((resp) => renderOOS());
 }
 
-const dispatchAEvent = (href) => {
-    console.log(href);
-    if(href == `${document.URL}#portfolio`)
-        renderProjects();
-    else if(href == `${document.URL}#resume`)
-        renderResume();
-    else if(href == `${document.URL}#hiringInfo`)
-        renderHiringInfo();
-    appHistory.push(href);
+const renderPage = (hash) => {
+         if(hash == '#portfolio') renderProjects();
+    else if(hash == '#resume') renderResume();
+    else if(hash == '#hiringInfo') renderHiringInfo();
 }
 
 // ########################################################
 
-//click on A element
-document.body.addEventListener('click', (event) => {
-    let tag = event.target;
-    if (tag.tagName == 'A' && tag.href && event.button == 0) {
-        if (tag.origin == document.location.origin) {
-            let oldPath = document.location.pathname;
-            let newPath = tag.pathname;
-            
-            console.log(newPath);
+window.addEventListener('hashchange', (event) => {
+    renderPage(window.location.hash);
 
-            event.preventDefault();
-            dispatchAEvent(tag.href);
-        }
-    }
+    let a = document.querySelector(`[href='${window.location.hash}']`);
+    a.focus();
 });
 
 fetch(`/${langSwitch}/resume`)
     .then((resp) => handleErrors(resp))
     .then((resp) => resp.json())
     .then((resp) => renderHeaderSection(resp))
-    .catch((resp) => resp);
+    .catch((resp) => renderOOS());
 
-dispatchAEvent(`${document.URL}#portfolio`);
+renderPage('#portfolio');
+window.location.hash = '#portfolio';
 });

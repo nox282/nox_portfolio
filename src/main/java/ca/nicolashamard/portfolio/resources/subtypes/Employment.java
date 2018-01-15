@@ -1,21 +1,19 @@
-package ca.nicolashamard.portfolio.resources;
-
-import org.springframework.data.annotation.Id;
+package ca.nicolashamard.portfolio.resources.subtypes;
 
 public class Employment {
 
 	private String company;
 	private String jobTitle;
 	private String location;
-	private String description;
+	private String[] experience;
 	private String from;
 	private String to;
 
-	public Employment(String company, String jobTitle, String location, String description, String from, String to){
+	public Employment(String company, String jobTitle, String location, String[] experience, String from, String to){
 		this.company = company;
 		this.jobTitle = jobTitle;
 		this.location = location;
-		this.description = description;
+		this.experience = experience;
 		this.from = from;
 		this.to = to;		
 	}
@@ -23,7 +21,7 @@ public class Employment {
 	public String getCompany() { return this.company; }
 	public String getJobTitle() {return this.jobTitle; }
 	public String getLocation() {return this.location; }
-	public String getDescription() {return this.description; }
+	public String[] getExperience() {return this.experience; }
 	public String getFrom() { return this.from; }
 	public String getTo() {	return this.to; }
 }

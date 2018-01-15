@@ -604,3 +604,9 @@ footer .footer-below {
         float: right;
     }
 }
+
+.resume-experience {
+    text-align: justify;
+    color: #d1d2da;
+    font-size: 20px;
+}

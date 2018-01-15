@@ -11,16 +11,6 @@ public class ApplicationController {
 
  	@RequestMapping(value = {"/"}, method = RequestMethod.GET)
 	public String index(Model model) {
-		return "index_en";
-	}
-
-	@RequestMapping(value = {"/en"}, method = RequestMethod.GET)
-	public String indexEn(Model model) {
-		return "index_en";
-	}
-
-	@RequestMapping(value = {"/fr"}, method = RequestMethod.GET)
-	public String indexFr(Model model) {
-		return "index_fr";
+		return "index";
 	}
 }

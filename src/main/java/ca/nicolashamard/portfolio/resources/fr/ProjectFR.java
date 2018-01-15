@@ -1,41 +1,28 @@
-package ca.nicolashamard.portfolio.resources;
+package ca.nicolashamard.portfolio.resources.fr;
 
+import ca.nicolashamard.portfolio.resources.subtypes.*;
 import org.springframework.data.annotation.Id;
 
-public class Project {
-
+public class ProjectFR {
 	@Id
 	private String id;
-
 	private String title;
-
 	private String description;
-
 	private String[] controls;
-
 	private String note;
-
 	private String url;
-
 	private String sourceURL;
-
 	private String imageURL;
-
 	private String[] screenshots;
-
 	private String videoURL;
-
 	private Collaborator[] team;
-
 	private String gameEngine;
-
 	private String[] technologies;
-
 	private String[] tags;
 
-	public Project(){}
+	public ProjectFR(){}
 
-	public Project(String id, String title, String description, String[] controls, String note, String url, String sourceURL, String imageURL, String[] screenshots, String videoURL, Collaborator[] team, String gameEngine, String[] technologies, String[] tags){
+	public ProjectFR(String id, String title, String description, String[] controls, String note, String url, String sourceURL, String imageURL, String[] screenshots, String videoURL, Collaborator[] team, String gameEngine, String[] technologies, String[] tags){
 		this.id = id;
 		this.title = title;
 		this.description = description;
@@ -66,4 +53,5 @@ public class Project {
 	public String getGameEngine() { return this.gameEngine; }
 	public String[] getTechnologies() { return this.technologies; }
 	public String[] getTags() { return this.tags; }
+
 }

@@ -6,9 +6,8 @@ import java.nio.charset.*;
 import java.nio.file.*;
 import com.google.common.io.*;
 
-
-
-import ca.nicolashamard.portfolio.resources.*;
+import ca.nicolashamard.portfolio.resources.en.*;
+import ca.nicolashamard.portfolio.resources.fr.*;
 import ca.nicolashamard.portfolio.repositories.*;
 
 import org.springframework.beans.factory.annotation.*;
@@ -28,14 +27,22 @@ public class ResumeController {
 	private final String ENResumePath = "/files/CV-EN.pdf";
 
 	@Autowired
-	private ResumeRepository resumeRepository;
+	private ResumeENRepository resumeEnRepository;
 
-	private final Logger log = LoggerFactory.getLogger(ResumeRepository.class);
+	@Autowired
+	private ResumeFRRepository resumeFrRepository;
+
+	private final Logger log = LoggerFactory.getLogger(ResumeController.class);
 
 	@RequestMapping(value = {"/{lang}/resume"}, method = RequestMethod.GET)
 	public ResponseEntity getResume(@PathVariable String lang) {
 		try{
-			return ResponseEntity.ok(serializeResume(resumeRepository.findAll()));
+			if(lang.equals("English"))
+				return ResponseEntity.ok(serializeResumeEN(resumeEnRepository.findAll()));
+			else if (lang.equals("Francais")) 
+				return ResponseEntity.ok(serializeResumeFR(resumeFrRepository.findAll()));
+			else
+				return ResponseEntity.status(404).build();
 		} catch(Exception e) {
 			log.error(e.getMessage());
 			return ResponseEntity.status(500).build();
@@ -44,9 +51,9 @@ public class ResumeController {
 
 	@RequestMapping(value = {"/{lang}/resume/HamardNicolas-CV.pdf"}, method = RequestMethod.GET)
 	public ResponseEntity downloadResume(@PathVariable String lang) {
-		if(lang.equals("en"))
+		if(lang.equals("English"))
 			return downloadResume(lang, ENResumePath);
-		else if (lang.equals("fr")) 
+		else if (lang.equals("Francais")) 
 			return downloadResume(lang, FRResumePath);
 		else
 			return ResponseEntity.status(404).build();
@@ -72,7 +79,7 @@ public class ResumeController {
 	}
 
 
-	private String serializeResume(List<Resume> resumes) throws IOException{
+	private String serializeResumeEN(List<ResumeEN> resumes) throws IOException{
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(out, resumes);
@@ -80,4 +87,11 @@ public class ResumeController {
         return new String(out.toByteArray(), StandardCharsets.UTF_8);
 	}
 
+	private String serializeResumeFR(List<ResumeFR> resumes) throws IOException{
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(out, resumes);
+
+        return new String(out.toByteArray(), StandardCharsets.UTF_8);
+	}
 }

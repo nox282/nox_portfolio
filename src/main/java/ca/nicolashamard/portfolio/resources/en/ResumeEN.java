@@ -1,9 +1,9 @@
-package ca.nicolashamard.portfolio.resources;
+package ca.nicolashamard.portfolio.resources.en;
 
-import ca.nicolashamard.portfolio.resources.*;
+import ca.nicolashamard.portfolio.resources.subtypes.*;
 import org.springframework.data.annotation.Id;
 
-public class Resume {
+public class ResumeEN {
 	@Id
 	private String id;
 	private String firstname;
@@ -18,7 +18,9 @@ public class Resume {
 	private Social[] socials;
 	private String[] interestedIn;
 
-	public Resume (String id, String firstname, String lastname, String pictureURL, String location, String[] languages, String description, Education[] education, Employment[] employment, String[] technologies, Social[] socials, String[] interestedIn) {
+	public ResumeEN(){}
+
+	public ResumeEN (String id, String firstname, String lastname, String pictureURL, String location, String[] languages, String description, Education[] education, Employment[] employment, String[] technologies, Social[] socials, String[] interestedIn) {
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;

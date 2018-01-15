@@ -1,4 +1,4 @@
-package ca.nicolashamard.portfolio.resources;
+package ca.nicolashamard.portfolio.resources.subtypes;
 
 import org.springframework.data.annotation.Id;
 

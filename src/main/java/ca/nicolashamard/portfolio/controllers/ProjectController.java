@@ -4,7 +4,8 @@ import java.util.*;
 import java.io.*;
 import java.nio.charset.*;
 
-import ca.nicolashamard.portfolio.resources.*;
+import ca.nicolashamard.portfolio.resources.en.*;
+import ca.nicolashamard.portfolio.resources.fr.*;
 import ca.nicolashamard.portfolio.repositories.*;
 
 import org.springframework.beans.factory.annotation.*;
@@ -19,7 +20,10 @@ import org.slf4j.*;
 public class ProjectController {
 
 	@Autowired
-	private ProjectRepository projectRepository;
+	private ProjectENRepository projectEnRepository;
+
+	@Autowired
+	private ProjectFRRepository projectFrRepository;
 
     private final Logger log = LoggerFactory.getLogger(ProjectController.class);
 
@@ -27,24 +31,27 @@ public class ProjectController {
 	@RequestMapping(value = {"/{lang}/projects", "/{lang}/projects/"}, method = RequestMethod.GET)
 	public ResponseEntity getProjects(@PathVariable String lang){
 		try {
-			return ResponseEntity.ok(serializeProjects(projectRepository.findAll()));
+			if(lang.equals("English"))
+				return ResponseEntity.ok(serializeProjectsEN(projectEnRepository.findAll()));
+			else if(lang.equals("Francais"))
+				return ResponseEntity.ok(serializeProjectsFR(projectFrRepository.findAll()));
+			else
+				return ResponseEntity.status(404).build();
 		} catch(Exception e) {
 			log.error(e.getMessage());
 			return ResponseEntity.status(500).build();
 		}
 	}
 
-	@RequestMapping(value = {"/{lang}/project/{title}"}, method = RequestMethod.GET)
-	public ResponseEntity getProject(@PathVariable("lang") String lang, @PathVariable("title") String title){
-		try {
-			return ResponseEntity.ok(serializeProjects(Arrays.asList(projectRepository.findByTitle(title))));
-		 } catch(Exception e) {
-			log.error(e.getMessage());
-			return ResponseEntity.status(500).build();
-		}
+	private String serializeProjectsEN(List<ProjectEN> projects) throws IOException{
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(out, projects);
+
+        return new String(out.toByteArray(), StandardCharsets.UTF_8);
 	}
 
-	private String serializeProjects(List<Project> projects) throws IOException{
+	private String serializeProjectsFR(List<ProjectFR> projects) throws IOException{
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(out, projects);

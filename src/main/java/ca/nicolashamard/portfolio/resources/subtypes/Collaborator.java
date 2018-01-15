@@ -1,6 +1,4 @@
-package ca.nicolashamard.portfolio.resources;
-
-import org.springframework.data.annotation.Id;
+package ca.nicolashamard.portfolio.resources.subtypes;
 
 public class Collaborator {
 

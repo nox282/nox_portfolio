@@ -46,7 +46,7 @@ const renderNavBarElement = () => {
                         <a href="#resume">Résumé</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#hiringInfo">Hiring infos</a>
+                        <a href="#hiringInfo">${(langSwitch == 'English') ? 'Hiring infos' : `Infos d'Embauche`}</a>
                     </li>
                     <li class="page-scroll">
                         <div class="dropdown">
@@ -157,8 +157,10 @@ const renderResumeElements = (data, lang) => {
                             ${data.employment.map((job) => `<li>
                                 <div class="container">
                                     <p><strong>${job.jobTitle}</strong> ${(lang == 'English') ? 'at' : 'à'} <strong>${job.company}</strong><br/>
-                                    In ${job.location} ${(lang == 'English') ? 'from' : 'de'} ${job.from} ${(lang == 'English') ? 'to' : 'à'} ${job.to}</p>
-                                    <p>${job.description ? `<strong>Description :</strong> ${job.description}`: ``}</p>
+                                    ${(lang == 'English') ? 'In' : ''} ${job.location} ${(lang == 'English') ? 'from' : 'de'} ${job.from} ${(lang == 'English') ? 'to' : 'à'} ${job.to}</p>
+                                    ${(job.experience.length > 0) ? `<ul Style="list-style-type: disc;">
+                                            ${(job.experience.map((exp) => `<li class="resume-experience">${exp}</li>`).join(''))}
+                                        </ul>`:``}
                                 </div>
                             </li>`).join('')}
                         </ul>
@@ -209,7 +211,7 @@ const renderHiringInfoElement = (data, lang) => {
                             ${data.interestedIn.map((interest) => `<li><p>${interest}</p></li>`).join()}
                         </ul><br/>
 
-                        <h3>${(lang == 'English') ? 'Contact/Social Media' : 'Contacte/Média'}</h3>
+                        <h3>${(lang == 'English') ? 'Contact/Social Media' : 'Contact/Média'}</h3>
                         <hr class="star-primary"/>
                         
                         <ul>

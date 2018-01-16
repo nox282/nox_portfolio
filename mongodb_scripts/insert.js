@@ -1,5 +1,3 @@
-db = connect("localhost:27017/portfolio_db");
-
 db.projectEN.drop();
 db.projectFR.drop();
 db.resumeEN.drop();

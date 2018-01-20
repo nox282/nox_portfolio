@@ -28,7 +28,7 @@ db.projectEN.insert([
 		],
 		videoURL: '',
 		team: [
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Unity',
 		technologies:[
@@ -71,7 +71,7 @@ db.projectEN.insert([
 			{ name: 'Giulia Cantoni (Web Developpement)', url: 'https://www.linkedin.com/in/giulia-cantoni/'},
 			{ name: 'Samuel Pilon (Game Developpement)', url: 'https://www.linkedin.com/in/samuel-pilon/'},
 			{ name: 'Alyson Appleby (Art Assets)', url: ''},
-			{ name: 'Nicolas Hamard (Web/Game Developement)', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard (Web/Game Developement)', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Unity',
 		technologies:[
@@ -112,7 +112,7 @@ db.projectEN.insert([
 		videoURL: '',
 		team: [
 			{ name: 'Maude-Amélie Dufresne', url: ''},
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Unity',
 		technologies:[
@@ -136,7 +136,7 @@ db.projectEN.insert([
 		screenshots: [],
 		videoURL: '',
 		team: [
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Spring boot',
 		technologies:[
@@ -167,7 +167,7 @@ db.projectEN.insert([
 		],
 		videoURL: '',
 		team: [
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'P5.js',
 		technologies:[
@@ -191,7 +191,7 @@ db.projectEN.insert([
 		videoURL: '',
 		team: [
 			{ name: 'Jean-Sebastien Paul', url: 'https://www.linkedin.com/in/jean-s%C3%A9bastien-paul-0b4ba7126/'},
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Spring boot',
 		technologies:[
@@ -232,7 +232,7 @@ db.projectFR.insert([
 		],
 		videoURL: '',
 		team: [
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Unity',
 		technologies:[
@@ -275,7 +275,7 @@ db.projectFR.insert([
 			{ name: 'Giulia Cantoni (Développement Web)', url: 'https://www.linkedin.com/in/giulia-cantoni/'},
 			{ name: 'Samuel Pilon (Développement Jeux Vidéo)', url: 'https://www.linkedin.com/in/samuel-pilon/'},
 			{ name: 'Alyson Appleby (Eléments Artistiques)', url: ''},
-			{ name: 'Nicolas Hamard (Développement Web/Jeux Vidéo)', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard (Développement Web/Jeux Vidéo)', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Unity',
 		technologies:[
@@ -316,7 +316,7 @@ db.projectFR.insert([
 		videoURL: '',
 		team: [
 			{ name: 'Maude-Amélie Dufresne', url: ''},
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Unity',
 		technologies:[
@@ -340,7 +340,7 @@ db.projectFR.insert([
 		screenshots: [],
 		videoURL: '',
 		team: [
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Spring boot',
 		technologies:[
@@ -371,7 +371,7 @@ db.projectFR.insert([
 		],
 		videoURL: '',
 		team: [
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'P5.js',
 		technologies:[
@@ -395,7 +395,7 @@ db.projectFR.insert([
 		videoURL: '',
 		team: [
 			{ name: 'Jean-Sebastien Paul', url: 'https://www.linkedin.com/in/jean-s%C3%A9bastien-paul-0b4ba7126/'},
-			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
 		],
 		gameEngine: 'Spring boot',
 		technologies:[
@@ -425,7 +425,7 @@ db.resumeEN.insert([
 			'French (Native)',
 			'English (Professional proficiency)'
 		],
-		description: 'I am a young graduate in software engineering looking for new opportunities in the game development world.',
+		description: 'I am a young graduate in software engineering seeking new opportunities in the game development world.',
 		education: [
 			{
 				school: 'UQAM | Université du Québec à Montréal',
@@ -488,7 +488,7 @@ db.resumeEN.insert([
 			},
 			{
 				name: 'LinkedIn',
-				url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'
+				url: 'https://www.linkedin.com/in/nicolashamard/'
 			}
 		],
 		interestedIn: [
@@ -579,7 +579,7 @@ db.resumeFR.insert([
 			},
 			{
 				name: 'LinkedIn',
-				url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'
+				url: 'https://www.linkedin.com/in/nicolashamard/'
 			}
 		],
 		interestedIn: [

@@ -12,10 +12,10 @@ db.projectEN.insert([
 		title: 'Avocado Wars',
 		description: 'Game developed in a span of 3 days during the UQAMJAM 2017 under the theme  “Avocado RPG”. It is a local multiplayer turn-based game in which your goal is to destroy your opponent’s avocado tree. A tree produces one seed every three turns. During your turn, you can select a tree and throw a seed from it. If the seed lands on the ground, an avocado tree will grow where the seed landed. If the seed touches a wall or a rock, it will be destroyed. If the seed lands on a tree, the tree will lose 1 life point no matter its faction. Every tree spawns with 2 life points. The game ends when one of the player’s starter tree gets destroyed.',
 		controls: [
-			'Left click to select a tree (there is no selection animation)',
-			'With a tree selected, right click to load a seed (once a seed is loaded, you can\'t go back on your move)',
-			'With a seed loaded, left click to throw a seed (the mouse position gives the direction, the distance between the cursor and the tree gives the force)',
-			'Space to pass your turn (or use the UI button)'
+			'Left click to select a tree (there is no selection animation).',
+			'With a tree selected, right click to load a seed (once a seed is loaded, you can\'t go back on your move).',
+			'With a seed loaded, left click to throw a seed (the mouse position gives the direction, the distance between the cursor and the tree gives the force).',
+			'Space to pass your turn (or use the user interface button).'
 		],
 		note: 'The in game tutorial was written after 2 sleepless nights and isn’t of any help… sorry!',
 		url: '',
@@ -45,7 +45,7 @@ db.projectEN.insert([
 	},
 	{
 		title: 'Veritas',
-		description: 'Project as part of a class. Veritas is a proof of concept for a web application aiming to motivate primary school students by making homeworks playful and accessible. The service has two access points : teacher side, where they can schedule and publish exercises, and the student side, which is a browser game using WebGL. The student side uses exercices published by teachers to generate quests and fight events in game. The student must resolve the assignment (questions are given by the monsters) in order to complete an event and be rewarded. The project is inspired by the platform <a href=”https://www.prodigygame.com/” class="portfolio-link">Prodigy</a> which is not available in French.',
+		description: 'Project as part of a class. Veritas is a proof of concept for a web application aiming to motivate primary school students by making homeworks playful and accessible. The service has two access points : teacher side, where they can schedule and publish exercises, and the student side, which is a browser game using WebGL. The student side uses exercices published by teachers to generate quests and fight events in game. The student must resolve the assignment (questions are given by the monsters) in order to complete an event and be rewarded. The project is inspired by the platform <a href="https://www.prodigygame.com/" class="portfolio-link">Prodigy</a> which is not available in French.',
 		controls: [],
 		note: 'The game implements HTTP sockets client side as well as server side. Unfortunately, Unity WebGL applications do not support websockets. The multiplayer has been disabled. To access the game, be sure to use HTTP, not HTTPS.',
 		url: 'http://veritas-jeu.herokuapp.com/',
@@ -94,8 +94,8 @@ db.projectEN.insert([
 		title: 'Marco et le capitalisme',
 		description: 'Project as part of a class. This game is a school project and also a test project as it was my first experience with Unity. It is a 2D runner-like with random obstacles (selected from a pool of prefabs). If the player reaches the score goal, they enter a boss stage. The game then turns into a 3D third person shooter. The player can fire paintballs. They can change the paint color by stepping on color spheres. They must hit targets that randomly spawn on the boss’s body with the proper color in order to deal damage.',
 		controls: [
-			'1st phase : use the mouse cursor to move around',
-			'2nd phase : WASD to move, left click to fire'
+			'1st phase : use the mouse cursor to move around.',
+			'2nd phase : WASD to move, left click to fire.'
 		],
 		note: '',
 		url: 'https://github.com/nox282/INF5071_tp1/releases',
@@ -214,12 +214,12 @@ db.projectEN.insert([
 db.projectFR.insert([
 	{
 		title: 'Avocado Wars',
-		description: 'Jeu réalisé en 3 jours dans le cadre de l’UQAMJAM 2017 avec comme thème RPG Avocat. C\’est un jeu multijoueur local tour par tour où le but est de détruire l\'avocatier adverse. Un arbre génère une graine tous les 3 tours. Pendant votre tour vous pouvez sélectionner un arbre et lancer un pépin. Si le pépin touche le sol, un avocatier pousse à cet endroit. S’il touche un mur ou une roche, le pépin est détruit. Si le pépin touche un arbre peu importe à quelle faction cet arbre appartient, l’arbre perd 1 point de vie. Chaque arbre démarre avec 2 points de vie. La partie se termine lorsque l’arbre originel d’un joueur est abattu.',
+		description: 'Jeu réalisé en 3 jours dans le cadre de l’UQAMJAM 2017 avec comme thème RPG Avocat. C\’est un jeu multijoueur local tour par tour où le but est de détruire l\'avocatier adverse. Un arbre génère un noyau tous les 3 tours. Pendant votre tour vous pouvez sélectionner un arbre et lancer un noyau. Si le noyau touche le sol, un avocatier pousse à cet endroit. S’il touche un mur ou une roche, le noyau est détruit. Si le noyau touche un arbre peu importe à quelle faction cet arbre appartient, l’arbre perd 1 point de vie. Chaque arbre démarre avec 2 points de vie. La partie se termine lorsque l’arbre de départ d’un joueur est abattu.',
 		controls: [
-			'Clic gauche pour sélectionner un arbre (il n\'y a pas d\'animation de sélection)', 
-			'Avec un arbre sélectionné, clic droit pour charger une graine (une fois la graine chargée, vous ne pouvez plus retourner en arrière)',
-			'Avec une graine chargée, clic gauche pour lancer une graine (la souris détermine la direction et la distance avec l’arbre détermine la force)',
-			'Espace pour passer le tour (ou le bouton sur l\’interface)'
+			'Clic gauche pour sélectionner un arbre (il n\'y a pas d\'animation de sélection).', 
+			'Avec un arbre sélectionné, clic droit pour charger un noyau (une fois le noyau chargé, vous ne pouvez plus retourner en arrière).',
+			'Avec un noyau chargé, clic gauche pour lancer un noyau (la souris détermine la direction et la distance avec l’arbre détermine la force).',
+			'Espace pour passer le tour (ou le bouton sur l\’interface).'
 		],
 		note: 'Le tutorial du jeu a été fait en dernier après 2 nuits blanches et ne sert pas à grand chose... Désolé!',
 		url: '',
@@ -249,7 +249,7 @@ db.projectFR.insert([
 	},
 	{
 		title: 'Veritas',
-		description: 'Projet dans le cadre d’un cours. Veritas est une preuve de concept d’une application de type service web visant à motiver et intéresser les élèves de primaire en rendant les devoirs à la maison ludiques et accessibles. Le web service a deux façades : la partie professeur, permettant de planifier et mettre à disposition les exercices à faire, et la partie élèves, un jeu navigateur utilisant WebGL. La partie élève utilise les exercices publiés par les professeurs pour produire des quêtes et des événements de combat dans le jeu. Les élèves doivent résoudre les exercices (les énoncés sont donnés par les monstres) pour réussir le combat et obtenir une récompense. Le projet s’inspire de la plateforme <a href=”https://www.prodigygame.com/” class="portfolio-link">Prodigy</a> qui n’est pas disponible en français.',
+		description: 'Projet dans le cadre d’un cours. Veritas est une preuve de concept d’une application de type service web visant à motiver et intéresser les élèves de primaire en rendant les devoirs à la maison ludiques et accessibles. Le web service a deux façades : la partie professeur, permettant de planifier et mettre à disposition les exercices à faire, et la partie élèves, un jeu navigateur utilisant WebGL. La partie élève utilise les exercices publiés par les professeurs pour produire des quêtes et des événements de combat dans le jeu. Les élèves doivent résoudre les exercices (les énoncés sont donnés par les monstres) pour réussir le combat et obtenir une récompense. Le projet s’inspire de la plateforme <a href="https://www.prodigygame.com/" class="portfolio-link">Prodigy</a> qui n’est pas disponible en français.',
 		controls: [],
 		note: 'Le jeu implémente des sockets HTTP côté client et côté serveur. Cependant, le build de Unity vers une application WebGL ne permet pas l’utilisation de websocket. la fonctionnalité multijoueur a donc été désactivée. Pour accéder à la partie jeu, soyez sûr d’utiliser HTTP et non HTTPS.',
 		url: 'http://veritas-jeu.herokuapp.com/',
@@ -298,8 +298,8 @@ db.projectFR.insert([
 		title: 'Marco et le capitalisme',
 		description: 'Projet dans le cadre d’un cours. Ce jeu a été à la fois un projet d\'école et un projet de test de Unity puisque c\'était ma première expérience avec ce moteur. C’est un runner en 2D avec un placement aléatoire d’obstacle (pris dans une pool de prefab). Si le joueur atteint un objectif de points, il accède à un boss stage. Le jeu se transforme en shooter à la troisième personne. Le joueur peut donc tirer de la peinture. Il peut changer la couleur de la peinture en marchant sur les sphères de couleur. Il doit tirer sur des cibles générées aléatoirement sur le corps du boss avec la bonne couleur pour infliger des dégâts.',
 		controls: [
-			'1ère phase : le pointeur de la souris pour se diriger',
-			'2ème phase : WASD pour bouger, clic gauche pour tirer'
+			'1ère phase : le pointeur de la souris pour se diriger.',
+			'2ème phase : WASD pour bouger, clic gauche pour tirer.'
 		],
 		note: '',
 		url: 'https://github.com/nox282/INF5071_tp1/releases',

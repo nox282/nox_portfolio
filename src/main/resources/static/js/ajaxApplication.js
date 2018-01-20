@@ -64,6 +64,18 @@ const renderNavBarElement = () => {
     </nav>`;
 }
 
+const renderFooterElement = (lang) => {
+    return `<div class="row">
+                <div class="col-lg-12">
+                    ${(lang == 'English') ? 
+                    `Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.<br/>
+                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.` : 
+                    `Freelance est un thème Bootstrap open source gratuit créé par <a href="http://startbootstrap.com">Start Bootstrap</a>.<br/>
+                    Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence Creative Commons Attribution 4.0 International</a>.`}
+                </div>
+            </div>`;
+}
+
 const renderItem = (index, item) => {
     return `<div class="col-sm-4 portfolio-item">
                 <a href="#${"portfolioModal"+index}" class="portfolio-link" data-toggle="modal">
@@ -309,7 +321,14 @@ const renderHiringInfoPage = (resumes) => {
 const renderNavBar = () => {
     let content = renderNavBarElement();
     if(content != '')
-        render(content, '#navbar-conainer');
+        render(content, '#navbar-container');
+}
+
+const renderFooter = () => {
+    let content = renderFooterElement(langSwitch);
+    console.log(content);
+    if(content != '')
+        render(content, '#footer-container');
 }
 
 //error handling on data fetch
@@ -366,6 +385,7 @@ const renderEverything = (hash) => {
     renderHeader();
     renderNavBar();
     renderPage(hash);
+    renderFooter();
 }
 
 const switchLanguage = (lang) => {

@@ -82,7 +82,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: url("../img/Background_tileable.png") no-repeat center center;
+    background: url("../img/Tilleable_background.jpg") no-repeat center center;
     background-size: cover;
 }
 

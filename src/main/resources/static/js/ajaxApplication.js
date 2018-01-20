@@ -50,7 +50,7 @@ const renderNavBarElement = () => {
                     </li>
                     <li class="page-scroll">
                         <div class="dropdown">
-                            <button class="btn btn-primary navbar-dropdown-btn navbar-dropdown-btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="lang-switch">${langSwitch}</button>
+                            <button class="btn btn-primary navbar-dropdown-btn navbar-dropdown-btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="lang-switch">${availableLanguagesdisplay[availableLanguages.indexOf(langSwitch)]}</button>
                             <ul class="dropdown-menu">
                                 ${availableLanguages.map((language) => `${(language != langSwitch) ? `<li><a href="#${language}">${availableLanguagesdisplay[availableLanguages.indexOf(language)]}</a></li>`:``}`).join('')}
                             </ul>
@@ -97,10 +97,10 @@ const renderModal = (index, item, lang) => {
                             `<p>note : ${item.note}</p>` : ``}
                             <br />
                             
-                            ${item.gameEngine ? `<p><strong>GameEngine</strong> : ${item.gameEngine}</p>`: ``}
+                            ${item.gameEngine ? `<p><strong>${(lang == 'English') ? `Game Engine` : `Moteur de Jeu`}</strong> : ${item.gameEngine}</p>`: ``}
                             
                             ${(item.team.length > 0) ? 
-                            `<ul class="list-inline item-details"><strong>By : </strong>
+                            `<ul class="list-inline item-details"><strong>${(lang == 'English') ? `By` : `Par`} : </strong>
                                 ${item.team.map((person) => `<li><strong>${(person.url != '') ?
                                 `<a href="${person.url}" class="portfolio-link">${person.name}</a>` : `${person.name}`}
                                 </strong></li>`).join()}
@@ -116,14 +116,14 @@ const renderModal = (index, item, lang) => {
                             ${(item.videoURL != '') ? `<strong>Video : <a href="${item.videoURL}" class="portfolio-link">${item.videoURL}</a></strong>`:``}</p>
                             
                             ${(item.controls.length != 0) ? 
-                            `<h3>Controls</h3>
+                            `<h3>${(lang == 'English') ? `Controls` : `Contrôles`}</h3>
                             <hr class="star-primary"/>
                             <ul>
                                 ${item.controls.map((control) => `<li>${control}</li>`).join('')}
                             </ul>` : ``}
                             
                             ${(item.screenshots.length > 0) ?
-                            `<h3>Screenshots</h3>
+                            `<h3>${(lang == 'English') ? `Screenshot(s)` : `Capture(s) d'écran`}</h3>
                             <hr class="star-primary"/>
                             <ul class="list-inline item-details">
                             ${item.screenshots.map((screenshot) => 

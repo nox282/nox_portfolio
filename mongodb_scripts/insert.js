@@ -10,7 +10,7 @@ db.resumeFR.drop();
 db.projectEN.insert([
 	{
 		title: 'Avocado Wars',
-		description: 'Game developed in a span of 3 days during the UQAMJAM 2017 under the theme  “Avocado RPG”. It is a (local on one computer) multiplayer turn based game in which your goal is to destroy your opponent’s avocado tree. A tree produces one seed every three turns. During your turn, you can select a tree and throw a seed from it. If the seed lands on the ground, an avocado tree will grow where the seed landed. If the seed touches a wall or a rock, it will be destroyed. If the seed lands on a tree, the tree will lose 1 life point no matter its faction. Every tree spawns with 2 life points. The game ends when one of the player’s starter tree gets destroyed.',
+		description: 'Game developed in a span of 3 days during the UQAMJAM 2017 under the theme  “Avocado RPG”. It is a local multiplayer turn-based game in which your goal is to destroy your opponent’s avocado tree. A tree produces one seed every three turns. During your turn, you can select a tree and throw a seed from it. If the seed lands on the ground, an avocado tree will grow where the seed landed. If the seed touches a wall or a rock, it will be destroyed. If the seed lands on a tree, the tree will lose 1 life point no matter its faction. Every tree spawns with 2 life points. The game ends when one of the player’s starter tree gets destroyed.',
 		controls: [
 			'Left click to select a tree (there is no selection animation)',
 			'With a tree selected, right click to load a seed (once a seed is loaded, you can\'t go back on your move)',
@@ -45,9 +45,9 @@ db.projectEN.insert([
 	},
 	{
 		title: 'Veritas',
-		description: 'Project as part of a class. Veritas is a proof of concept for a web application aiming to motivate primary school students by making homeworks playful and accessible. The service has two access points : teacher side, where they can schedule and publish exercices, and the student side, which is a navigator game using WebG. The student side uses exercices published by teachers to generate quests and fight events in game. The student must resolve the assignment (questions are given by the monsters) in order to complete an event and be rewarded. The project is inspired by the platform <a href=”https://www.prodigygame.com/” class="portfolio-link">Prodigy</a> which is not available in french.',
+		description: 'Project as part of a class. Veritas is a proof of concept for a web application aiming to motivate primary school students by making homeworks playful and accessible. The service has two access points : teacher side, where they can schedule and publish exercises, and the student side, which is a browser game using WebGL. The student side uses exercices published by teachers to generate quests and fight events in game. The student must resolve the assignment (questions are given by the monsters) in order to complete an event and be rewarded. The project is inspired by the platform <a href=”https://www.prodigygame.com/” class="portfolio-link">Prodigy</a> which is not available in French.',
 		controls: [],
-		note: 'The game implements HTTP sockets client side as well as server side. Unfortunately, Unity builds to WebGL application does not support websockets. The multiplayer has been deactivated. To access the game, be sure to use HTTP, not HTTPS',
+		note: 'The game implements HTTP sockets client side as well as server side. Unfortunately, Unity WebGL applications do not support websockets. The multiplayer has been disabled. To access the game, be sure to use HTTP, not HTTPS.',
 		url: 'http://veritas-jeu.herokuapp.com/',
 		sourceURL: 'https://github.com/nox282/inm5151-veritas',
 		imageURL: 'img/portfolio/Veritas/1.jpg',
@@ -70,8 +70,8 @@ db.projectEN.insert([
 		team: [
 			{ name: 'Giulia Cantoni (Web Developpement)', url: 'https://www.linkedin.com/in/giulia-cantoni/'},
 			{ name: 'Samuel Pilon (Game Developpement)', url: 'https://www.linkedin.com/in/samuel-pilon/'},
-			{ name: 'Alyson Appleby (Art assets)', url: ''},
-			{ name: 'Nicolas Hamard (Web/game Developement)', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Alyson Appleby (Art Assets)', url: ''},
+			{ name: 'Nicolas Hamard (Web/Game Developement)', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
 		],
 		gameEngine: 'Unity',
 		technologies:[
@@ -92,7 +92,7 @@ db.projectEN.insert([
 	},
 	{
 		title: 'Marco et le capitalisme',
-		description: 'Project as part of a class. This game is a school project and also a test project as it was my first experience with Unity. It is a 2D runner-like with random obstacles (selected from a pool of prefabs). If the player reach the score goal, they enter in a boss stage. The game then turns into a 3D third person shooter. The player can fire paintballs. They can change the paint color by stepping on color spheres. They must hit targets that randomly spawn on the boss’s body with the proper color in order to deal damage.',
+		description: 'Project as part of a class. This game is a school project and also a test project as it was my first experience with Unity. It is a 2D runner-like with random obstacles (selected from a pool of prefabs). If the player reaches the score goal, they enter a boss stage. The game then turns into a 3D third person shooter. The player can fire paintballs. They can change the paint color by stepping on color spheres. They must hit targets that randomly spawn on the boss’s body with the proper color in order to deal damage.',
 		controls: [
 			'1st phase : use the mouse cursor to move around',
 			'2nd phase : WASD to move, left click to fire'
@@ -214,14 +214,14 @@ db.projectEN.insert([
 db.projectFR.insert([
 	{
 		title: 'Avocado Wars',
-		description: 'Jeu réalisé en 3 jours dans le cadre de l’UQAMJAM 2017 avec comme thème RPG Avocat. C\’est un jeu multijoueur (local sur un seul ordinateur) tour par tour où le but est de détruire l\'avocatier adverse. Un arbre génère une graine tous les 3 tours. Pendant votre tour vous pouvez sélectionner un arbre et lancer un pépin. Si le pépin touche le sol, un avocatier pousse à cet endroit. S’il touche un mur ou une roche, le pépin est détruit. Si le pépin touche un arbre (peu importe à quelle faction cet arbre appartient), l’arbre perd 1 point de vie. Chaque arbre démarre avec 2 points de vie. La partie se termine lorsque l’arbre originel d’un joueur est abattu.',
+		description: 'Jeu réalisé en 3 jours dans le cadre de l’UQAMJAM 2017 avec comme thème RPG Avocat. C\’est un jeu multijoueur local tour par tour où le but est de détruire l\'avocatier adverse. Un arbre génère une graine tous les 3 tours. Pendant votre tour vous pouvez sélectionner un arbre et lancer un pépin. Si le pépin touche le sol, un avocatier pousse à cet endroit. S’il touche un mur ou une roche, le pépin est détruit. Si le pépin touche un arbre peu importe à quelle faction cet arbre appartient, l’arbre perd 1 point de vie. Chaque arbre démarre avec 2 points de vie. La partie se termine lorsque l’arbre originel d’un joueur est abattu.',
 		controls: [
-			'Clic gauche pour sélectionner un arbre', 
-			'Avec un arbre sélectionné, clic droit pour charger une graine (une fois une graine chargée, vous ne pouvez plus retourner en arrière)',
+			'Clic gauche pour sélectionner un arbre (il n\'y a pas d\'animation de sélection)', 
+			'Avec un arbre sélectionné, clic droit pour charger une graine (une fois la graine chargée, vous ne pouvez plus retourner en arrière)',
 			'Avec une graine chargée, clic gauche pour lancer une graine (la souris détermine la direction et la distance avec l’arbre détermine la force)',
 			'Espace pour passer le tour (ou le bouton sur l\’interface)'
 		],
-		note: 'Le tutorial du jeu a été fait en dernier après 2 nuits blanches... Désolé!',
+		note: 'Le tutorial du jeu a été fait en dernier après 2 nuits blanches et ne sert pas à grand chose... Désolé!',
 		url: '',
 		sourceURL: 'https://bitbucket.org/nox282/uqamjam_2017_avocadowars',
 		imageURL: 'img/portfolio/AvocadoWars/1.jpg',
@@ -249,9 +249,9 @@ db.projectFR.insert([
 	},
 	{
 		title: 'Veritas',
-		description: 'Projet dans le cadre d’un cours. Veritas est une preuve de concept d’une application de type web service visant à motiver et intéresser les élèves de primaire en rendant les devoirs à la maison ludiques et accessibles. Le web service a deux facades : la partie professeur, permettant de planifier et mettre à disposition les exercices à faire, et la partie élèves, un jeu navigateur utilisant WebGL. La partie élève utilise les exercices publiés par les professeurs pour produire des quêtes et des événements de combat dans le jeu. Les élèves doivent résoudre les exercices (les énoncés sont donnés par les monstres) pour réussir le combat et obtenir une récompense. Le projet s’inspire de la plateforme <a href=”https://www.prodigygame.com/” class="portfolio-link">Prodigy</a> qui n’est pas disponible en français.',
+		description: 'Projet dans le cadre d’un cours. Veritas est une preuve de concept d’une application de type service web visant à motiver et intéresser les élèves de primaire en rendant les devoirs à la maison ludiques et accessibles. Le web service a deux façades : la partie professeur, permettant de planifier et mettre à disposition les exercices à faire, et la partie élèves, un jeu navigateur utilisant WebGL. La partie élève utilise les exercices publiés par les professeurs pour produire des quêtes et des événements de combat dans le jeu. Les élèves doivent résoudre les exercices (les énoncés sont donnés par les monstres) pour réussir le combat et obtenir une récompense. Le projet s’inspire de la plateforme <a href=”https://www.prodigygame.com/” class="portfolio-link">Prodigy</a> qui n’est pas disponible en français.',
 		controls: [],
-		note: 'Le jeu implémente des sockets HTTP côté client et côté serveur. Cependant, le build de Unity vers une application WebGL ne permet pas l’utilisation de websocket. la fonctionnalité multijoueur a donc été désactivée. Pour accéder à la partie jeu, soyez sûr d’utiliser HTTP et non HTTPS',
+		note: 'Le jeu implémente des sockets HTTP côté client et côté serveur. Cependant, le build de Unity vers une application WebGL ne permet pas l’utilisation de websocket. la fonctionnalité multijoueur a donc été désactivée. Pour accéder à la partie jeu, soyez sûr d’utiliser HTTP et non HTTPS.',
 		url: 'http://veritas-jeu.herokuapp.com/',
 		sourceURL: 'https://github.com/nox282/inm5151-veritas',
 		imageURL: 'img/portfolio/Veritas/1.jpg',
@@ -272,10 +272,10 @@ db.projectFR.insert([
 		],
 		videoURL: '',
 		team: [
-			{ name: 'Giulia Cantoni (Web Developpement)', url: 'https://www.linkedin.com/in/giulia-cantoni/'},
-			{ name: 'Samuel Pilon (Game Developpement)', url: 'https://www.linkedin.com/in/samuel-pilon/'},
-			{ name: 'Alyson Appleby (Art assets)', url: ''},
-			{ name: 'Nicolas Hamard (Web/game Developement)', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
+			{ name: 'Giulia Cantoni (Développement Web)', url: 'https://www.linkedin.com/in/giulia-cantoni/'},
+			{ name: 'Samuel Pilon (Développement Jeux Vidéo)', url: 'https://www.linkedin.com/in/samuel-pilon/'},
+			{ name: 'Alyson Appleby (Eléments Artistiques)', url: ''},
+			{ name: 'Nicolas Hamard (Développement Web/Jeux Vidéo)', url: 'https://www.linkedin.com/in/nicolas-hamard-a33127bb/'}
 		],
 		gameEngine: 'Unity',
 		technologies:[

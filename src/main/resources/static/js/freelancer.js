@@ -47,7 +47,10 @@ $('body').scrollspy({
     target: '.navbar-fixed-top'
 })
 
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
+// Close menu on click (mobile mode)
+// Thanks : https://github.com/twbs/bootstrap/issues/9013#issuecomment-39698247
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a:not(".dropdown-toggle")') ) {
+        $(this).collapse('hide');
+    }
 });

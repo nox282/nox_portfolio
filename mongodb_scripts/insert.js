@@ -203,7 +203,30 @@ db.projectEN.insert([
 		tags:[
 			'web'
 		]
-	}	
+	},
+	{
+		title: '[WIP] Dejavon',
+		description: '[Work In Progress] Arcade racing game',
+		controls: [],
+		note: '',
+		url: '',
+		sourceURL: 'https://github.com/nox282/dejavon',
+		imageURL: 'https://www.eliassoftware.com/wp-content/uploads/2017/04/unreal-engine-4-logo-large-1320x800.png',
+		screenshots: [],
+		videoURL: '',
+		team: [
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
+		],
+		gameEngine: 'Unreal Engine 4',
+		technologies:[
+			'C++',
+			'Unreal Engine'
+		],
+		tags:[
+			'arcade',
+			'racing'
+		]
+	}
 ]);
 
 //##########################################################################################
@@ -407,7 +430,30 @@ db.projectFR.insert([
 		tags:[
 			'web'
 		]
-	}	
+	},
+	{
+		title: '[WIP] Dejavon',
+		description: '[En cours] Jeu de course arcade',
+		controls: [],
+		note: '',
+		url: '',
+		sourceURL: 'https://github.com/nox282/dejavon',
+		imageURL: 'https://www.eliassoftware.com/wp-content/uploads/2017/04/unreal-engine-4-logo-large-1320x800.png',
+		screenshots: [],
+		videoURL: '',
+		team: [
+			{ name: 'Nicolas Hamard', url: 'https://www.linkedin.com/in/nicolashamard/'}
+		],
+		gameEngine: 'Unreal Engine 4',
+		technologies:[
+			'C++',
+			'Unreal Engine'
+		],
+		tags:[
+			'arcade',
+			'racing'
+		]
+	}
 ]);
 
 //##########################################################################################

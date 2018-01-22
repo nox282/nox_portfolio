@@ -46,7 +46,7 @@ const renderNavBarElement = () => {
                         <a href="#resume">Résumé</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#hiringInfo">${(langSwitch == 'English') ? 'Hiring infos' : `Infos d'Embauche`}</a>
+                        <a href="#hiringInfo">${(langSwitch == 'English') ? 'Contact' : `Contact`}</a>
                     </li>
                     <li class="page-scroll">
                         <div class="dropdown">
@@ -203,7 +203,9 @@ const renderResumeElements = (data, lang) => {
                         <div class="container">
                             <hr class="star-primary"/>
                             <p style="text-align: center;"><a href="/${lang}/resume/HamardNicolas-CV.pdf" download>
-                            ${(lang == 'English') ? 'Download this résumé' : 'Télécharger ce C.V.'}</a></p>
+                            ${(lang == 'English') ? 'Download this résumé in .pdf' : 'Télécharger ce CV en .pdf'}</a></p>
+                            <p style="text-align: center;"><a href="/${lang}/resume/HamardNicolas-CV.docx" download>
+                            ${(lang == 'English') ? 'Download this résumé in .docx' : 'Télécharger ce CV en .docx'}</a></p>
                         </div>
                     </div>
                 </div>

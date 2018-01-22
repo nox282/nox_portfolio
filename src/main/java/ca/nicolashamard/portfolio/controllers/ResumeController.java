@@ -23,8 +23,10 @@ import org.slf4j.*;
 @Controller
 public class ResumeController {
 	
-	private final String FRResumePath = "/files/CV-FR.pdf";
-	private final String ENResumePath = "/files/CV-EN.pdf";
+	private final String FRResumePDFPath = "/files/CV-FR.pdf";
+	private final String ENResumePDFPath = "/files/CV-EN.pdf";
+	private final String FRResumeDocxPath = "/files/CV-FR.docx";
+	private final String ENResumeDocxPath = "/files/CV-EN.docx";
 
 	@Autowired
 	private ResumeENRepository resumeEnRepository;
@@ -50,16 +52,26 @@ public class ResumeController {
 	}
 
 	@RequestMapping(value = {"/{lang}/resume/HamardNicolas-CV.pdf"}, method = RequestMethod.GET)
-	public ResponseEntity downloadResume(@PathVariable String lang) {
+	public ResponseEntity downloadResumePDF(@PathVariable String lang) {
 		if(lang.equals("English"))
-			return downloadResume(lang, ENResumePath);
+			return downloadResume(ENResumePDFPath);
 		else if (lang.equals("Francais")) 
-			return downloadResume(lang, FRResumePath);
+			return downloadResume(FRResumePDFPath);
 		else
 			return ResponseEntity.status(404).build();
 	}
 
-	private ResponseEntity downloadResume(String lang, String resourcePath) {
+	@RequestMapping(value = {"/{lang}/resume/HamardNicolas-CV.docx"}, method = RequestMethod.GET)
+	public ResponseEntity downloadResumeDocx(@PathVariable String lang) {
+		if(lang.equals("English"))
+			return downloadResume(ENResumeDocxPath);
+		else if (lang.equals("Francais")) 
+			return downloadResume(FRResumeDocxPath);
+		else
+			return ResponseEntity.status(404).build();
+	}
+
+	private ResponseEntity downloadResume(String resourcePath) {
 		try{
 			Resource resource = new ClassPathResource(resourcePath);
 			byte[] data = ByteStreams.toByteArray(resource.getInputStream());

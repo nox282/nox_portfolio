@@ -177,6 +177,21 @@ const renderResumeElements = (data, lang) => {
                             </li>`).join('')}
                         </ul>
                         
+                        <h3>GameJam</h3>
+                        <hr class="star-primary"/>
+                        <ul>
+                            ${data.gamejams.map((item) => `<li>
+                                <div class="container">
+                                    <p>
+                                    <strong><a href="${item.url}" class="portfolio-link">${item.jam}</a> ${item.year}</strong></br>
+                                    ${(lang == 'English') ? 'Project :' : 'Projet :'} ${item.project}
+                                    ${(item.projectUrl != '') ? `${(lang == 'English') ? 'available at':'disponible à'} <a href="${item.projectUrl}" class="portfolio-link">${item.projectUrl}</a>`: ``}
+                                    </p>
+                                </div>
+                            </li>`).join('')}
+                        </ul>
+
+
                         <h3>Education</h3>
                         <hr class="star-primary"/>
                         <ul>
@@ -328,7 +343,6 @@ const renderNavBar = () => {
 
 const renderFooter = () => {
     let content = renderFooterElement(langSwitch);
-    console.log(content);
     if(content != '')
         render(content, '#footer-container');
 }

@@ -14,13 +14,14 @@ public class ResumeEN {
 	private String description;
 	private Education[] education;
 	private Employment[] employment;
+	private GameJam[] gamejams;
 	private String[] technologies;
 	private Social[] socials;
 	private String[] interestedIn;
 
 	public ResumeEN(){}
 
-	public ResumeEN (String id, String firstname, String lastname, String pictureURL, String location, String[] languages, String description, Education[] education, Employment[] employment, String[] technologies, Social[] socials, String[] interestedIn) {
+	public ResumeEN (String id, String firstname, String lastname, String pictureURL, String location, String[] languages, String description, Education[] education, Employment[] employment, GameJam[] gamejams, String[] technologies, Social[] socials, String[] interestedIn) {
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
@@ -30,6 +31,7 @@ public class ResumeEN {
 		this.description = description;
 		this.education = education;
 		this.employment = employment;
+		this.gamejams = gamejams;
 		this.technologies = technologies;
 		this.socials = socials;
 		this.interestedIn = interestedIn;
@@ -44,6 +46,7 @@ public class ResumeEN {
 	public String getDescription() { return this.description; }
 	public Education[] getEducation() { return this.education; }
 	public Employment[] getEmployment() { return this.employment; }
+	public GameJam[] getGamejams() { return this.gamejams; }
 	public String[] getTechnologies() { return this.technologies; }
 	public Social[] getSocials() { return this.socials; }
 	public String[] getInterestedIn() { return this.interestedIn; }

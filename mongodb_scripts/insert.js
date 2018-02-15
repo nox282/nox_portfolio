@@ -514,6 +514,15 @@ db.resumeEN.insert([
 				to: 'September 2011'
 			}
 		],
+		gamejams: [
+			{
+				jam: 'UQAMJAM',
+				year: '2017',
+				url: 'http://gamejam.uqam.ca/',
+				project: 'Avocado Wars',
+				projectUrl: ''
+			}
+		],
 		technologies: [
 			'C/C++',
 			'C#',
@@ -603,6 +612,15 @@ db.resumeFR.insert([
 				],
 				from: 'Juin 2011',
 				to: 'Septembre 2011'
+			}
+		],
+		gamejams: [
+			{
+				jam: 'UQAMJAM',
+				year: '2017',
+				url: 'http://gamejam.uqam.ca/',
+				project: 'Avocado Wars',
+				projectUrl: ''
 			}
 		],
 		technologies: [

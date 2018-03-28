@@ -308,10 +308,22 @@ const renderAllModals = (itemList) => {
     return itemList;
 }
 
+const renderItemRow = (item, i, length) => {
+    let content = ``;
+    if(i == 0) content += `<div class="row">`;
+    else if( i % 3 == 0) content += `</div><div class="row">`
+    
+    content += renderItem(i+1, item);
+    
+    if(i == length - 1) content += `</div>`;
+    
+    return content;
+}
+
 const renderItemList = (itemList) => {
     let content = `<div class="container">
                     <div class="portfolio-item-list row">
-                        ${itemList.map((item, i) => renderItem(i+1, item)).join('')}
+                        ${itemList.map((item, i) => renderItemRow(item, i, itemList.length)).join('')}
                     </div>
                 </div>`;
     render(content, '#main-content');

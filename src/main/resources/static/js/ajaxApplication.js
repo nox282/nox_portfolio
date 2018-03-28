@@ -16,7 +16,7 @@ const renderHeaderElement = (resume, lang) => {
                     <div class="intro-text">
                         <span class="name">${resume.firstname} ${resume.lastname}</span>
                         <hr class="star-light">
-                        <span class="skills">${(lang == 'English') ? `Video Game Developer` : `Développeur Jeux Vidéo`}</span><br/>
+                        <span class="skills">${(lang == 'English') ? `Developer` : `Développeur`}</span><br/>
                         <span class="skills">${resume.location}</span>
                     </div>
                 </div>

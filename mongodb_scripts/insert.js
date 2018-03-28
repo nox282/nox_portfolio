@@ -521,6 +521,13 @@ db.resumeEN.insert([
 				url: 'http://gamejam.uqam.ca/',
 				project: 'Avocado Wars',
 				projectUrl: ''
+			},
+			{
+				jam:'40 Hours Game Jam',
+				year: '2018',
+				url: 'https://itch.io/jam/40-hours',
+				project:'Cat-Tastrophe!',
+				projectUrl: ''
 			}
 		],
 		technologies: [
@@ -621,6 +628,13 @@ db.resumeFR.insert([
 				year: '2017',
 				url: 'http://gamejam.uqam.ca/',
 				project: 'Avocado Wars',
+				projectUrl: ''
+			},
+			{
+				jam:'40 Hours Game Jam',
+				year: '2018',
+				url: 'https://itch.io/jam/40-hours',
+				project:'Cat-Tastrophe!',
 				projectUrl: ''
 			}
 		],

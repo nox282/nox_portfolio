@@ -551,7 +551,8 @@ db.resumeEN.insert([
 			'General Game Developpement',
 			'Gameplay Programming',
 			'Tools Programming',
-			'Engine Programming'
+			'Engine Programming',
+			'Back End Developpement'
 		]
 	}
 ]);
@@ -651,7 +652,8 @@ db.resumeFR.insert([
 			'Programmation généraliste Jeux Vidéo',
 			'Programmation Gameplay',
 			'Programmation d\'outils',
-			'Programmation Engin'
+			'Programmation Engin',
+			'Programmation Back End'
 		]
 	}
 ]);
